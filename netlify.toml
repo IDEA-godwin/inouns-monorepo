@@ -1,5 +1,5 @@
 [context.production.environment]
-  REACT_APP_CHAIN_ID = "1"
+  REACT_APP_CHAIN_ID = "11155111"
   REACT_APP_ENABLE_HISTORY = "true"
 
 [context."staging".environment]
@@ -22,5 +22,5 @@
   directory = "packages/nouns-webapp/functions"
 
 [build]
-  command = "git submodule update --init --recursive --depth=1 && yarn workspace @nouns/webapp build"
+  command = "NODE_OPTIONS=--openssl-legacy-provider git submodule update --init --recursive --depth=1 && yarn workspace @nouns/webapp build"
   publish = "packages/nouns-webapp/build"
